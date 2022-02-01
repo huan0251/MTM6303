@@ -1,0 +1,44 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{ section.settings.card_image | image_url: width: 500 }}" alt="{{section.settings.card_image.alt}}">
+  <div class="card-body">
+    <h5 class="card-title">Dinning Area</h5>
+    <p class="card-text">No matter how big or small your dinning room is, we are confidence you will pick one you love.</p>
+    <a href="https://huan-mtm6303.myshopify.com/collections/dining" class="btn btn-primary">Dinning Collection</a>
+  </div>
+</div>
+
+<style>
+  .card .btn {
+    background-color : {{ section.settings.btn-color}}
+  }
+</style>  
+{% schema %}
+{
+    "name": "Bootstrap Card",
+    "tag": "section",
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card Image"
+        },
+        {
+            "type": "color",
+            "id": "btn-color",
+            "label": "Button Color",
+            "default": "#4d2944"
+        }
+    ],
+    "presets": [{
+        "name": "Bootstrap Card",
+        "category": "Custom"
+    }]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

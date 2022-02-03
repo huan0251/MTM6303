@@ -1,10 +1,12 @@
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="{{ section.settings.card_image | image_url: width: 500 }}" alt="{{section.settings.card_image.alt}}">
+  
   <div class="card-body">
-    <h5 class="card-title">Dinning Area</h5>
-    <p class="card-text">No matter how big or small your dinning room is, we are confidence you will pick one you love.</p>
-    <a href="https://huan-mtm6303.myshopify.com/collections/dining" class="btn btn-primary">Dinning Collection</a>
+    <h5 class="card-title" data-live-text-setting="section.feature-columns.block.feature-columns-0.title/escape">{{section.settings.card_text}}</h5>
+    <p class="card-text" data-live-text-setting="section.feature-columns.block.feature-columns-0.text">{{section.settings.card_textarea}}</p>
+    <a href="{{section.settings.button_link}}" class="btn btn-primary">{{section.settings.btn_label}}</a>
   </div>
+  
 </div>
 
 <style>
@@ -23,10 +25,32 @@
           "label": "Card Image"
         },
         {
+           "type": "text",
+           "label": "Heading",
+           "default": "Collection",
+           "id": "card_text"
+        },
+        {
+           "type": "textarea",
+           "id": "card_textarea",
+           "label": "Message",
+           "default": "No matter how big or small your dinning room is, we are confidence you will pick one you love."
+        },
+        {
+           "type": "url",
+           "id": "button_link",
+           "label": "Button link"
+        },
+        {
+          "type": "text",
+          "id": "btn_label",
+          "label": "Button text"
+        },
+        {
             "type": "color",
             "id": "btn-color",
             "label": "Button Color",
-            "default": "#4d2944"
+            "default": "#3b4d28"
         }
     ],
     "presets": [{

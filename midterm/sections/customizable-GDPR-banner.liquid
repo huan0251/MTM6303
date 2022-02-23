@@ -1,0 +1,80 @@
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{section.settings.custom_text_title}}</strong>
+     {{section.settings.custom_text_body}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <a href="{{section.settings.button_link}}" class="btn">{{section.settings.btn_label}}</a>
+</div>
+<style>
+.alert {
+        background : {{ section.settings.background-color }};
+        color:{{ section.settings.font-color }};
+    }
+.alert .btn {
+    background-color : {{ section.settings.btn-color}};
+    color:{{ section.settings.btn-text-color}};
+  }
+</style>  
+
+{% schema %}
+{
+    "name": "Custom Banner",
+    "tag": "section",
+    "class": "index-section--flush",
+    "settings": [{
+            "id": "custom_text_title",
+            "type": "text",
+            "label": "Banner Title",
+            "default": "Banner Title"
+        },
+        {
+            "id": "custom_text_body",
+            "type": "richtext",
+            "label": "Banner Text",
+            "default": "<p>Add your text here</p>"
+        },
+        {
+            "type": "color",
+            "id": "background-color",
+            "label": "Background Color",
+            "default": "#fff3cd"
+        },
+        {
+            "type": "color",
+            "id": "font-color",
+            "label": "Font Color",
+            "default": "#664d03"
+        },
+        {
+           "type": "url",
+           "id": "button_link",
+           "label": "Button link"
+        },
+        {
+          "type": "text",
+          "id": "btn_label",
+          "label": "Button text"
+        },
+        {
+            "type": "color",
+            "id": "btn-color",
+            "label": "Button Color",
+            "default": "#BF7590"
+        },
+        {   "type": "color",
+            "id": "btn-text-color",
+            "label": "Button Text Color",
+            "default": "#FFFFFF"
+        }
+    ],
+    "presets": [{
+        "name": "Custom Banner",
+        "category": "Custom"
+    }]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

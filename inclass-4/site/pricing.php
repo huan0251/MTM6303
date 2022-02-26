@@ -15,9 +15,6 @@
  Functions are 
  defined in this section
 *******************************/
-$service_num = 1;
-// $imgUrlStart = "https://www.algonquincollege.com/future-students/files";
-// $link_start = "https://algonquincollege.zoom.us/webinar/register";
 
 $services = [
     "service_1" => [
@@ -36,15 +33,6 @@ $services = [
         "servicePrice" => "48",
     ],
 ];
-
-// Button Class 
-$btn_class = "success";
-
-// Paragrpah End 
-$end_value = 102;
-# This is a comment
-// echo $title1;
-
 
 ?>
 

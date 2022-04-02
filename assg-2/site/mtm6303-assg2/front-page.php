@@ -13,7 +13,6 @@
  * @since MT6303 Assignment 1.0
  */
 
- echo "Test";
 // Get header
 get_header();?>
 

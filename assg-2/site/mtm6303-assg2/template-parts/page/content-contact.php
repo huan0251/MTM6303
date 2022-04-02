@@ -22,25 +22,19 @@
                 <img class="img-responsive" src="<?php echo get_stylesheet_directory_uri()?>/assets/images/contact.jpg">
             </div>
             <div class="col-xs-12">
-
+                
+                <!-- Contact Form 7 display -->
                 <div class="row">
                     <div class="col-md-6">
-                        <form action="" class="reveal-content contact-form">
-                            <div class="form-group">
-                                <input type="name" class="form-control" id="name" placeholder="Full name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="email" placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="subject" placeholder="Subject">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" rows="3" placeholder="Enter your message"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-lg">Send</button>
-                        </form>
+                    <h2 class="tm-text-secondary tm-mb-5">
+                        <?php echo get_the_title();?>
+                    </h2>
+
+                    <div class="entry-content-page tm-mb-6">
+                        <?php the_content(); ?>
+                        <!-- Page Content -->
                     </div>
+                </div>
 
 
                     <div class="col-md-5 col-md-offset-1">

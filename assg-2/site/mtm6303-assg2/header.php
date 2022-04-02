@@ -18,10 +18,9 @@
   <link href="<?php echo get_stylesheet_directory_uri()?>/assets/favicon.ico" rel="icon" />
 
  
+<!-- change the current page title -->
+  <title> <?php the_title() ?> </title>  
 
-  <title>Title Page</title>  
-
-<link href="<?php echo get_stylesheet_directory_uri()?>/assets/css/main.a3f694c0.css" rel="stylesheet" />
 </head>
 <!-- Body tag start -->
 <body>
@@ -44,9 +43,22 @@
 
       <div class="collapse navbar-collapse" id="navbar-collapse-uarr">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="page.php" title="" class="active">Home</a></li>
+          <!-- <li><a href="page.php" title="" class="active">Home</a></li>
           <li><a href="page.php" title=""> About</a></li>
-          <li><a href="./template-contact-us.php" title=""> Contact Us </a></li>
+          <li><a href="./template-contact-us.php" title=""> Contact Us </a></li> -->
+          <?php
+            $menu_items = mtm6303assg2_getnav();
+            foreach ($menu_items as $menu_item){
+              ?>
+            <li class=" <?php echo ($menu_item["active"])? "active" : "" ?> ">
+              <a href="<?php echo $menu_item["url"] ?>"><?php echo $menu_item["title"] ?>
+                <?php echo ($menu_item["active"])? '<span class="sr-only">(current)</span>' : "" ?>
+                
+              </a>
+            </li>
+            <?php
+            }
+            ?>
         </ul>
       </div>
     </div>
